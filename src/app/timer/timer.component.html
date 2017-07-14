@@ -19,9 +19,9 @@
                 </td>
             </tr>
             <tr class="timer_disp">
-                <td><input type="text" readonly value="{{time.hour}}" max="12" #hour (change)="getHour(hour.value)"></td>
-                <td><span class="colan_left">:</span><input type="text" readonly value="{{time.minute}}" max="60" #minute (change)="getMinute(minute.value)"><span class="colan_left">:</span></td>
-                <td><input readonly type="text" value="{{time.second}}" max="60" #second (change)="getSecond(second.value)"></td>
+                <td><input type="text" [(ngModel)]="time.hour" value="{{time.hour}}" max="12" #hour (change)="getHour(hour.value)"></td>
+                <td><span class="colan_left">:</span><input type="text" [(ngModel)]="time.minute" value="{{time.minute}}" max="60" #minute (change)="getMinute(minute.value)"><span class="colan_left">:</span></td>
+                <td><input type="text" [(ngModel)]="time.second" value="{{time.second}}" max="60" #second (change)="getSecond(second.value)"></td>
             </tr>
             <tr class="timer_prev">
                 <td>
