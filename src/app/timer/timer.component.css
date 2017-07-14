@@ -1,0 +1,79 @@
+.timer_next>td,
+.timer_prev>td,
+.timer_disp>td {
+    text-align: center;
+}
+
+.timer_next button,
+.timer_prev button {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    font-size: 18px;
+    height: 41px;
+    width: 70px;
+}
+
+.timer_next .fa-plus,
+.timer_prev .fa-minus {
+    color: rgba(24, 58, 104, 0.48);
+    cursor: pointer;
+}
+
+.timer_head th {
+    font-size: 24px;
+    text-align: center;
+}
+
+.timer_disp td input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    font-size: 38px;
+    color: #565d63;
+    font-weight: bold;
+    height: 37px;
+    text-align: center;
+    width: 72px;
+}
+
+.timer_head .sec {
+    width: 106px;
+}
+
+.timer_todo {
+    text-align: center;
+    width: 245px;
+}
+
+.timer_todo .todo .btn.btn-primary {
+    padding: 8px 13px;
+    font-size: 15px;
+    /* width: 72%; */
+    /* border-radius: 0px; */
+    margin-top: 20px;
+    background-color: #286090;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.timer_head .hr {
+    width: 92px;
+}
+
+.timer_disp .colan_left {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.timer_container table {
+    margin: auto auto;
+}
+
+.fa-2x {
+    font-size: 1.5em;
+}
+
+.timer_next td,
+.timer_prev td {
+    padding: 10px 0px;
+}

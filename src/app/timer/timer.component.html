@@ -1,0 +1,47 @@
+<div class="timer_container">
+    <table class="timer_table">
+        <thead class="timer_head">
+            <th class="hr">Hours</th>
+            <th>Mins</th>
+            <th class="sec">Sec</th>
+        </thead>
+        <br>
+        <tbody class="timer_body">
+            <tr class="timer_next">
+                <td>
+                    <i class="fa fa-plus fa-2x" (click)="getNextHour()"></i>
+                </td>
+                <td>
+                    <i class="fa fa-plus fa-2x" (click)="getNextMinute()"></i>
+                </td>
+                <td>
+                    <i class="fa fa-plus fa-2x" (click)="getNextSecond()"></i>
+                </td>
+            </tr>
+            <tr class="timer_disp">
+                <td><input type="text" readonly value="{{time.hour}}" max="12" #hour (change)="getHour(hour.value)"></td>
+                <td><span class="colan_left">:</span><input type="text" readonly value="{{time.minute}}" max="60" #minute (change)="getMinute(minute.value)"><span class="colan_left">:</span></td>
+                <td><input readonly type="text" value="{{time.second}}" max="60" #second (change)="getSecond(second.value)"></td>
+            </tr>
+            <tr class="timer_prev">
+                <td>
+                    <i class="fa fa-minus fa-2x" (click)="getPrevHour()"></i>
+                </td>
+                <td>
+                    <i class="fa fa-minus fa-2x" (click)="getPrevMinute()"></i>
+                </td>
+                <td>
+                    <i class="fa fa-minus fa-2x" (click)="getPrevSecond()"></i>
+                </td>
+            </tr>
+            <tr class="timer_todo">
+                <td colspan="3">
+                    <div class="todo"><button class="btn btn-primary" (click)="getMeTime()">LET'S DO THIS</button></div>
+                </td>
+            </tr>
+            <tr class="timer_todo" *ngIf="showTimerErr">
+                <td colspan="3"> <span class="todo" style="color:red;font-size:14px;">Please Set Time</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
