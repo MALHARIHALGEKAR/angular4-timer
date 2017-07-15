@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./timer.component.css']
 })
 export class TimerComponent implements OnInit {
-    showTimerErr = false;
     time: any = {hour: 0,minute: 0,second: 0};
 
   constructor() {}

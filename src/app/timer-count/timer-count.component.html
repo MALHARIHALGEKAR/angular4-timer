@@ -1,0 +1,24 @@
+<div class="col-sm-5 timercnt" *ngIf="showTimerDisp">
+    <div class="pull-right time_div">
+        <div class="col-md-6 col-xs-6 col-sm-6">
+            <p class="responsive-text">IN PROGRESS : AUD</p>
+            <div class="responsive-timer" style=""><span>{{hourDisp | number:'2.0-0'}}</span>&nbsp; : &nbsp; <span>{{minuteDisp | number:'2.0-0'}}</span> &nbsp; : &nbsp;
+                <span>{{SecondDisp | number:'2.0-0'}}</span>
+                <br>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-6 col-sm-6 pull-right">
+            <a *ngIf="!showme" class="btn btn-primary btn-mdsstudent btn-mdsstdnt" (click)="pauseMe();showme=!showme"><span class="fa fa-pause"></span> pause</a>
+            <a *ngIf="showme" class="btn btn-primary btn-mdsstudent btn-mdsstdntplay" (click)="resumeMe();showme=!showme"><span class="fa fa-play"></span> Resume</a>
+            <a (click)="endTheTest()" class="btn btn-primary btn-mdsstudent">End</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-5 col-xs-12 timer_endbtn" *ngIf="!showTimerDisp">
+    <div class="pull-right end">
+        <div class="col-md-4">
+            <a (click)="endTheTest()" class="btn btn-primary btn-mdsstudent">End</a>
+        </div>
+    </div>
+</div>

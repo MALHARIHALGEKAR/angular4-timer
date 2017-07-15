@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TimerComponent } from './timer/timer.component';
+import { TimerCountComponent } from './timer-count/timer-count.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TimerComponent
+    TimerComponent,
+    TimerCountComponent
   ],
   imports: [
     BrowserModule,FormsModule
