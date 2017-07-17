@@ -1,24 +1,45 @@
-<div class="col-sm-5 timercnt" *ngIf="showTimerDisp">
-    <div class="pull-right time_div">
-        <div class="col-md-6 col-xs-6 col-sm-6">
-            <p class="responsive-text">IN PROGRESS : AUD</p>
-            <div class="responsive-timer" style=""><span>{{hourDisp | number:'2.0-0'}}</span>&nbsp; : &nbsp; <span>{{minuteDisp | number:'2.0-0'}}</span> &nbsp; : &nbsp;
-                <span>{{SecondDisp | number:'2.0-0'}}</span>
-                <br>
-            </div>
-        </div>
-        <div class="col-md-6 col-xs-6 col-sm-6 pull-right">
-            <a *ngIf="!showme" class="btn btn-primary btn-mdsstudent btn-mdsstdnt" (click)="pauseMe();showme=!showme"><span class="fa fa-pause"></span> pause</a>
-            <a *ngIf="showme" class="btn btn-primary btn-mdsstudent btn-mdsstdntplay" (click)="resumeMe();showme=!showme"><span class="fa fa-play"></span> Resume</a>
-            <a (click)="endTheTest()" class="btn btn-primary btn-mdsstudent">End</a>
-        </div>
-    </div>
+<div class="timer_container">
+    <table class="timer_table">
+        <thead class="timer_head">
+            <th class="hr" colspan="3">Count-Up Timer </th>
+        </thead>
+        <tbody class="timer_body">
+            <tr class="timer_disp">
+                <td><span>{{hourDisp | number:'2.0-0'}}</span></td>
+                <td><span class="colan_left">:</span><span class="middle">{{minuteDisp | number:'2.0-0'}}</span><span class="colan_left">:</span></td>
+                <td><span>{{SecondDisp | number:'2.0-0'}}</span></td>
+            </tr>
+            <tr class="timer_todo">
+                <td colspan="3">
+                    <br>
+                    <a *ngIf="!showme" class="btn btn-primary btn-mdsstudent btn-mdsstdnt" (click)="pauseMe();showme=!showme"><span class="fa fa-pause"></span> Pause</a>
+                    <a *ngIf="showme" class="btn btn-primary btn-mdsstudent btn-mdsstdntplay" (click)="resumeMe();showme=!showme"><span class="fa fa-play"></span> Resume</a>
+                    <a (click)="endTheTest()" class="btn btn-primary btn-mdsstudent">Stop</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
-<div class="col-sm-5 col-xs-12 timer_endbtn" *ngIf="!showTimerDisp">
-    <div class="pull-right end">
-        <div class="col-md-4">
-            <a (click)="endTheTest()" class="btn btn-primary btn-mdsstudent">End</a>
-        </div>
-    </div>
+<div class="timer_container">
+    <table class="timer_table">
+        <thead class="timer_head">
+            <th class="hr" colspan="3">Count-Down Timer </th>
+        </thead>
+        <tbody class="timer_body">
+            <tr class="timer_disp">
+                <td><span>{{hourDisp | number:'2.0-0'}}</span></td>
+                <td><span class="colan_left">:</span><span class="middle">{{minuteDisp | number:'2.0-0'}}</span><span class="colan_left">:</span></td>
+                <td><span>{{SecondDisp | number:'2.0-0'}}</span></td>
+            </tr>
+            <tr class="timer_todo">
+                <td colspan="3">
+                    <br>
+                    <a *ngIf="!showme" class="btn btn-primary btn-mdsstudent btn-mdsstdnt" (click)="pauseMe();showme=!showme"><span class="fa fa-pause"></span> Pause</a>
+                    <a *ngIf="showme" class="btn btn-primary btn-mdsstudent btn-mdsstdntplay" (click)="resumeMe();showme=!showme"><span class="fa fa-play"></span> Resume</a>
+                    <a (click)="endTheTest()" class="btn btn-primary btn-mdsstudent">Stop</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

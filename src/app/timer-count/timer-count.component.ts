@@ -44,7 +44,7 @@ export class TimerCountComponent implements OnInit {
             this.timerData.minute = Math.floor(remSec1 / 60);
             this.timerData.second = remSec1 % 60;
             if(totalSeconds == x+1){
-              setTimeout( ()=>{localStorage.setItem('timerData',JSON.stringify(this.timerData)), this.updateTimeReq()}, 2000);
+              setTimeout( ()=>{localStorage.setItem('timerData',JSON.stringify(this.timerData))}, 2000);
             }
           })
     }
@@ -74,7 +74,7 @@ export class TimerCountComponent implements OnInit {
             this.timerData.minute = Math.floor(remSec1 / 60);
             this.timerData.second = remSec1 % 60;
             if(totalSeconds == x+1){
-              setTimeout( ()=>{localStorage.setItem('timerData',JSON.stringify(this.timerData)), this.updateTimeReq()}, 2000);
+              setTimeout( ()=>{localStorage.setItem('timerData',JSON.stringify(this.timerData))}, 2000);
             }
           })
     }

@@ -47,9 +47,7 @@
 .timer_todo .todo .btn.btn-primary {
     padding: 8px 13px;
     font-size: 15px;
-    /* width: 72%; */
-    /* border-radius: 0px; */
-    margin-top: 20px;
+    margin: 15px 5px 0px 5px;
     background-color: #286090;
     color: #fff;
     border: none;
